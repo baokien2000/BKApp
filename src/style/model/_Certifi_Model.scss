@@ -1,0 +1,43 @@
+
+ .modal-dialog{
+    width: fit-content;
+    max-width: fit-content;
+    .modal-content{
+        width: fit-content;
+        img{
+            height: 500px;
+            width: fit-content;
+        }
+
+    }
+ }   
+ @media only screen and (max-width: 1050px) {
+    .modal-dialog{
+        .modal-content{
+            img{
+                width: 75vw;
+                height: fit-content;
+            }
+        }
+     } 
+ }
+ @media only screen and (max-width: 750px) {
+    .modal-dialog{
+        .modal-content{
+            img{
+                width: 85vw;
+                height: fit-content;
+            }
+        }
+     } 
+ }
+ @media only screen and (max-width: 525px) {
+    .modal-dialog{
+        .modal-content{
+            img{
+                width: 95vw;
+                height: fit-content;
+            }
+        }
+     } 
+ }

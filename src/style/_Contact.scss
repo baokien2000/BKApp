@@ -1,0 +1,91 @@
+.Contact_Page{
+    width: 100vw;
+    height: 100vh;
+    background-color: #28282c ;
+    color: #fff;
+    padding-top: 60px;
+
+    .Header{
+        width: 100%;
+        margin: auto;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            text-align: center;
+        }
+        >img{
+            color: #fff;
+            width: 80px;
+            filter: grayscale(90%);
+        }
+    } // Header
+    .Container{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        .Card{
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            background-color: #434347;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            .Circle{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #28282c;
+            }
+
+            .Big_Circle{
+                margin: 20px 0 10px 0;
+                width: 70px;
+                height: 70px;
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+            .Small_Circle{
+                width: 40px;
+                height: 40px;
+                margin: 10px 5px;
+                a{
+                    outline: none;
+                    color: #fff;
+                    height: 25px;
+                }
+                svg{
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+
+            .Card_socialMedia{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        } // Card
+    } // .Container
+}
+@media only screen and (max-width: 425px) {
+    .Contact_Page{
+        height: fit-content;
+        padding-bottom: 50px;
+        .Container{
+            flex-direction: column;
+            align-items: center;
+            .Card{
+                height: 180px;
+            } // Card
+        } // .Container
+    }
+}

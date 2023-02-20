@@ -1,0 +1,239 @@
+.WeatherApp-container::-webkit-scrollbar {
+    display: none;
+}
+
+.WeatherApp {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    height: 100vh;
+    max-height: 700px;
+    padding: 0 0 10px 0;
+    margin: 0;
+    color: white;
+    
+    p,span{
+        cursor: default;
+    }
+
+    .WeatherApp-container {
+        // background-color: red;
+        width: 350px;
+        min-width: 350px;
+        background: no-repeat local top;
+        background-size: cover;
+        height: 100%;
+        overflow: auto;
+        border: 2px solid white;
+        .WeatherDataError{
+            >p{
+                background-color: transparent;
+                width: 100%;
+                font-size: 18px;
+                margin-top: 40px;
+                text-transform: capitalize;
+                text-align: center  ;
+            }
+        }
+        .SearchSuggesst{
+            position: absolute;
+            width: inherit;
+            padding-left: 60px;
+            z-index: 10;
+            margin-top: 5px;
+            span {
+                color: white;
+                display: block;
+                padding: 3px 0 3px 15px;
+                margin-right: 70px;
+                background-color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+            span:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+            
+            }
+            
+        } // .SearchSuggesst
+
+
+        .WeatherApp-hearder{
+            form {
+                margin-top: 10px;
+                justify-content: center;
+                input {
+                    width: 200px;
+                    height: 30px;
+                    margin-right: 10px;
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    border-radius: 0;
+                    cursor: default;
+                }
+                input:focus {
+                    background-color: transparent;
+                    color: white;
+                    box-shadow: none;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    border-radius: 0;
+                
+                }
+                svg {
+                    height: 30px;
+                    width: 18px;
+                    border-bottom: 1px solid white;
+                    color: white;
+                    line-height: 15px;
+                    cursor: pointer;
+                }
+                input::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: white;
+                }
+            } // .form
+        } // .WeatherApp-hearder
+
+
+        .WeatherData{
+            height: calc(100% - 80px);
+            span {
+                background-color: transparent;
+                width: 145px;
+                display: inline-block;
+            
+            }
+            b {
+                background-color: transparent;
+                width: 160px;
+                display: inline-block;
+                font-weight: normal;
+                height: 100%;
+                vertical-align: top;
+            }
+            .WeatherTemp{
+                .CityName {
+                    font-size: 20px;
+                    width: 100%;
+                }
+                .temp {
+                    font-size: 35px;
+                    background-color: transparent;
+                    width: 100%;
+                    margin-top: 40px !important;
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                    background-color: transparent;
+                    text-align: center;
+                }
+            } // .WeatherData
+            .WeatherInfo{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.6);
+                height: 150px;
+                align-self: flex-end;
+                position: absolute;
+                bottom: 10px;
+                width: 346px;
+                .WeatherInfo-Title{
+                    border-bottom: 1px solid #fff;
+                    width: 90%;
+                    margin-bottom: 5px;
+
+                    >p {
+                        display: inline-block;
+                        background-color: transparent;
+                        padding: 10px 0 0 0 ;
+                        margin-bottom: 5px;
+                        width: fit-content;
+                        text-align: start;
+                        font-size: 15px;
+                        text-transform: capitalize;
+                    }
+
+                    svg {
+                        color: white;
+                        float: right;
+                        width: 32px;
+                        height: 22px;
+                        cursor: pointer;
+                    }
+                    svg:hover {
+                        color: rgb(243, 224, 224);
+                    }
+                    button {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    button:focus {
+                        outline: none;
+                    }
+                    button:nth-child(5) svg {
+                        height: 18px;
+                        margin-bottom:4px;
+                    }
+                    button:nth-child(7) svg {
+                        height: 18px;
+                        margin-bottom:4px;
+                    }
+                }
+
+                >div {
+                    width: 90%;
+                }
+            } // .WeatherInfo
+
+        } // .WeatherData
+    }
+    .CustomWeather{
+        margin-left: 20px;
+
+        .MuiSlider-root span{
+            color:#fff
+        }
+        .MuiSlider-mark{
+            display: none;
+        }
+        .MuiSlider-thumb{
+            box-shadow: none !important;
+        }
+        .MuiSlider-thumb:hover{
+            box-shadow: 0px 0px 0px 8px rgba(199, 199, 199, 0.16) !important;
+        }
+        button {
+            margin: 5px;
+        }
+        .MuiBox-root{
+            margin-left: 10px;
+        }
+        h3{
+            text-align: center;
+        }
+        > span{
+            display: block;
+            font-style: italic;
+            font-size: 14px;
+            color: #a7a7a7;
+        }
+    } // CustomWeather
+
+} // WeatherApp
+
+@media only screen and (max-width: 425px) {
+    .WeatherApp {
+        justify-content: center;
+        .CustomWeather{
+            display: none;
+        } // CustomWeather
+    } // WeatherApp
+
+ 
+}

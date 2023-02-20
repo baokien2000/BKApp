@@ -1,0 +1,241 @@
+.RealTimeClock {
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    >p {
+        background-color: transparent;
+        width: 100%;
+        padding: 0;
+        color: #fff;
+        margin-bottom: 100px;
+        font-weight: bold;
+        text-transform: capitalize;
+        position: relative;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+    .Clock {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        Span {
+            position: absolute;
+            inset: 10px;
+            color: white;
+            text-align: center;
+        }
+        .One {
+            transform: rotate(30deg);
+            b {
+                display: inline-block;
+                transform: rotate(-30deg);
+            }
+        }
+        
+        .Two {
+            transform: rotate(60deg);
+            b {
+                display: inline-block;
+                transform: rotate(-60deg);
+            }
+        }
+        .Three {
+            transform: rotate(90deg);
+            b {
+                display: inline-block;
+                transform: rotate(-90deg);
+            }
+        }
+        .Four {
+            transform: rotate(120deg);
+            b {
+                display: inline-block;
+                transform: rotate(-120deg);
+            }
+        }
+        
+        
+        .Five {
+            transform: rotate(150deg);
+            b {
+                display: inline-block;
+                transform: rotate(-150deg);
+            }
+        }
+        
+        .Six {
+            transform: rotate(180deg);
+            b {
+                display: inline-block;
+                transform: rotate(-180deg);
+            }
+        }
+        
+        .Seven {
+            transform: rotate(210deg);
+            b {
+                display: inline-block;
+                transform: rotate(-210deg);
+            }
+        }
+        
+        .Eight {
+            transform: rotate(240deg);
+            b {
+                display: inline-block;
+                transform: rotate(-240deg);
+            }
+        }
+        
+        .Nine {
+            transform: rotate(270deg);
+            b {
+                display: inline-block;
+                transform: rotate(-270deg);
+            }
+        }
+        
+        .Ten {
+            transform: rotate(300deg);
+            b {
+                display: inline-block;
+                transform: rotate(-300deg);
+            }
+        }
+        
+        .Elevent {
+            transform: rotate(330deg);
+            b {
+                display: inline-block;
+                transform: rotate(-330deg);
+            }
+        }
+        
+        .Twelve {
+            transform: rotate(360deg);
+            b {
+                display: inline-block;
+                transform: rotate(-360deg);
+            }
+        }
+
+        .circle {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            transform-origin: bottom;
+
+            i {
+                position: absolute;
+                transform-origin: bottom;
+            }
+        }
+        .Circle1 {
+            width: 80px;
+            height: 80px;
+            i {
+                position: absolute;
+                height: 38px;
+                top: 1.5px;
+                background: #ff2972;
+                z-index: 3;
+                width: 4px;
+            }
+        }
+        .Circle2 {
+            width: 100px;
+            height: 100px;
+            i {
+                position: absolute;
+                height: 48px;
+                background: #fee800;
+                top: 1.5px;
+                z-index: 2;
+                width: 3px;
+            }
+            
+        }
+
+        .Circle3 {
+            width: 120px;
+            height: 120px;
+            i {
+                position: absolute;
+                height: 58px;
+                background: #04fc43;
+                z-index: 1;
+                width: 2px;
+                top: 1.5px;
+            }
+            
+        }
+    }
+
+    .Clock::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        z-index: 100;
+        background: white;
+        width: 8px;
+        height: 8px;
+        transform: translateY(2px);
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    .Digital {
+        position: relative;
+        width: 170px;
+        height: 50px;
+        box-shadow: 5px 25px 35px rgba(0, 0, 0, 0.25),
+            inset 1px 1px 5px rgba(0, 0, 0, 0.5),
+            inset 1px 1px 5px rgba(0, 0, 0, 0.2),
+            inset -1px -1px 5px rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        display: flex;
+        margin-left: 15px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        span {
+            position: relative;
+            margin: 10px;
+            color: #ff2972;
+        }
+
+        span:nth-child(even) {
+            color: white;
+            margin: 0;
+        }
+        span:nth-child(3) {
+            color: #fee800;
+        }
+
+        span:nth-child(5) {
+            color: #04fc43;
+        }
+        span:nth-child(6) {
+            color: white;
+            font-size: 12px;
+        }
+    }
+}

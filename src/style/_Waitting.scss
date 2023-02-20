@@ -1,0 +1,174 @@
+%Ringchild{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    margin: -30px;
+    border-radius: 50%;
+    // background-color: red;
+}
+%RingBefore{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;  
+}
+.Waitting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: calc(100vh - 108px);
+    margin-top: 150px;
+    width: calc(100vw - 350px);
+    position: absolute;
+    z-index: 200;
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        position: relative;
+        width: 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .Ring:nth-child(1){
+            @extend %Ringchild;
+            animation: animate 3s linear infinite;
+            // border-right: 4px solid transparent;
+            // border-top: 4px solid #24ecff;
+            border-right: 4px solid #24ecff;;
+            border-bottom: 4px solid transparent;
+        }
+        .Ring::before {
+            @extend %RingBefore;
+
+            bottom: 13px;
+            right: 5px;
+
+            background: #24ecff;
+            box-shadow: 0px 0px 0px 5px #24ecff33,
+            0px 0px 0px 10px #24ecff22,
+            0px 0px 0px 10px #24ecff11,
+            0px 0px 20px 0 #24ecff,
+            0px 0px 50px 0 #24ecff;
+        }
+
+        .Ring:nth-child(2){
+            @extend %Ringchild;
+
+          
+            animation: animate2 3s linear infinite;
+            border-left: 4px solid #93ff2d;;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Ring:nth-child(2)::before {
+            @extend %RingBefore;
+
+            top: initial;
+            bottom: 13px;
+            left: 5px;
+           
+            background: #93ff2d;
+            box-shadow: 0px 0px 0px 5px #93ff2d33,
+            0px 0px 0px 10px #93ff2d22,
+            0px 0px 0px 10px #93ff2d11,
+            0px 0px 20px 0 #93ff2d,
+            0px 0px 50px 0 #93ff2d;
+        }
+
+        .Ring:nth-child(3){
+            @extend %Ringchild;
+            position: absolute;
+            top: -66.66px;
+            animation: animate2 3s linear -1s infinite;
+            border-left: 4px solid #e41cf8;
+            border-bottom: 4px solid transparent;
+        } 
+
+        .Ring:nth-child(3)::before {
+            @extend %RingBefore;
+            top: initial;
+            bottom: 13px;
+            left: 5px;
+
+            background: #e41cf8;
+            box-shadow: 0px 0px 0px 5px #e41cf833,
+            0px 0px 0px 10px #e41cf822,
+            0px 0px 0px 10px #e41cf811,
+            0px 0px 20px 0 #e41cf8,
+            0px 0px 50px 0 #e41cf8;
+        }
+    }
+    
+    .Text{ 
+        position: absolute;
+        width: calc(100vw - 350px);
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        font-size: 1em;
+        font-family: consolas;
+        bottom: -100px;
+        letter-spacing: 0.15em;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        height: 40px;   
+        p{
+            background-color: transparent   ;
+            } 
+        span{
+            margin-bottom: -6px;
+            padding: 0;
+        }
+        span:nth-child(2){
+            animation: dot 1.5s linear infinite;
+        }
+        span:nth-child(3){
+            animation: dot 1.5s linear infinite;
+            animation-delay: 0.5s;
+        }
+        span:nth-child(4){
+            animation: dot 1.5s linear infinite;
+            animation-delay: 0.75s;
+        }
+    }
+}
+
+@keyframes animate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+@keyframes animate2{
+    0%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+@keyframes dot{
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-5px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .Waitting {
+        width: 100vw;
+    }
+  }

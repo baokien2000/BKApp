@@ -1,0 +1,52 @@
+{
+	"BK": [
+		{
+			"AboutMe": "THÔNG TIN",
+			"Ten": "Tên: Tăng Bảo Kiên",
+			"ThongTin": "Thông tin cá nhân",
+			"Tuoi": "Tuổi: 23", 
+			"GioiTinh": "Giới tính: Nam",
+			"NgaySinh": "Ngày sinh: 15/12/2000",
+			"SDT": "Số điện thoại: 0336783302",
+			"NoiSinh": "Nơi sinh sống: Thành phố Hồ Chí Minh",
+			"HocVan": "Học vấn: Đại học Tôn Đức Thắng",
+			"ChuyenNganh": "Chuyên ngành: Khoa học máy tính – tính toán thông minh",
+			"GioiThieuBanThan": "Giới thiệu bản thân",
+			"GioiThieuBanThan_1": "Tích cực, chủ động và có tinh thần trách nhiệm trong công việc. Yêu thích những công việc liên quan đến lập trình web và ứng dụng.",
+			"MucTieu": "Mục tiêu nghề nghiệp",
+			"MucTieuNgan": "Mục tiêu ngắn hạn: Mong muốn một môi trường làm việc chuyên nghiệp, có mức lương và cơ hội thăng tiến tốt.",
+			"MucTieuDai": "Mục tiêu dài hạn: Mong muốn có cơ hội cống hiến bản thân, đồng thời nâng cao kiến thức nghề nghiệp, học hỏi các kiến thức mới và đạt mục tiêu trở thành Senior Fullstack Developer trong tương lai.",
+			"LienHe": "Liên hệ",
+			"Home_Hi":"Hi! Chào mừng bạn",
+			"Home_Title":"Tôi tên Kiên - Front End Developer",
+			"ContactMe":"Liên hệ tôi",
+			"Skill":"KỸ NĂNG",
+			"Certificate":"CHỨNG CHỈ",
+			"Project":"DỰ ÁN"
+		},		
+		{
+			"AboutMe": "ABOUT ME",
+			"Ten": "Name: Tang Bao Kien",
+			"ThongTin": "Information", 
+			"Tuoi": "Age: 23", 
+			"GioiTinh": "Gender: Male", 
+			"NgaySinh": "Birth: 15 Dec 2000", 
+			"SDT": "Phone number: 0336783302", 
+			"NoiSinh": "Birthplace: Ho Chi Minh City", 
+			"HocVan": "Education: Ton Duc Thang University", 
+			"ChuyenNganh": "Majors: Computer Science - Intelligent Computing", 
+			"GioiThieuBanThan": "Introduce Myself", 
+			"GioiThieuBanThan_1": "Positive, proactive, and responsible at work. I love the work related to web and mobile programming.", 
+			"MucTieu": "Objective", 
+			"MucTieuNgan": "Short-term: Looking for a professional working environment with a good salary and promotion opportunities.",
+			"MucTieuDai": "Long-term: Willing to dedicate myself to work, at the same time improving major knowledges, learning new knowledges,and achieving the goal of becoming a Senior Fullstack Developer.", 
+			"LienHe": "Contact",
+			"Home_Hi":"Hi! Welcome here",
+			"Home_Title":"I am Kien - Front End Developer",
+			"ContactMe":"Contact Me",
+			"Skill":"SKILLS",
+			"Certificate":"CERTIFICATES",
+			"Project":"PROJECTS"
+		}
+	]
+}

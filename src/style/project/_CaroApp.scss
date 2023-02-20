@@ -1,0 +1,127 @@
+.CaroApp {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    .game-info {
+        margin-left: 20px;
+        height: fit-content;
+        width: 30%;
+        p {
+            margin-bottom: 14px;
+            line-height: 36px;
+            background-color: transparent;
+            color: white;
+            width: 70%;
+            padding-right: 10px;
+            padding-top: 0;
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 40px;
+        }
+        ol {
+            overflow-y: auto;
+            height: 408px;
+            li {
+                color: white;
+                button {
+                    margin: 5px 0 5px 10px;
+                
+                }
+            }
+        }
+
+        >button {
+            line-height: 5px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+
+    }
+
+    .game-board {
+        p{
+            background-color: transparent;
+            width: 100%;
+            padding: 0;
+            color: #fff;
+            font-weight: bold;
+            text-transform: capitalize;
+            position: relative;
+            font-size: 1.5em;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .board-row{
+
+            .square {
+                background: #444;
+                border: 2px solid #28282c;
+                float: left;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 24px;
+                height: 34px;
+                width: 34px;
+            }
+
+            .square:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .CaroApp {
+        flex-direction: column;
+        align-items: center;
+        .game-info {
+
+            width: 100%;
+            p {
+                margin-top: 20px;
+                line-height: 15px;
+                font-size: 20px;
+                padding-left: 30px;
+            }
+            ol {
+                height: 315px;
+                li {
+                    button {
+                        font-size: 14px;
+                        width: 150px;
+                    }
+                }
+            }
+    
+            >button {
+                line-height: 5px;
+                height: 30px;
+                border-radius: 3px;
+                margin-bottom: 0px;
+                font-weight: bold;
+            }
+    
+    
+        }
+    
+        .game-board {
+    
+            .board-row{
+    
+                .square {
+                    border: 2px solid #28282c;
+                    padding: 0;
+                    font-size: 18px;
+                    line-height: 18px;
+                    height: 25px;
+                    width: 25px;
+                    margin: 0.5px;
+                }
+            }
+        }
+    }
+}

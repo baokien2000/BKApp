@@ -1,0 +1,119 @@
+  .Certificate_Page{
+    width: 100vw;
+    height: 100vh;
+    background-color: #28282c ;
+    color: #fff;
+    padding-top: 60px;
+    .Header{
+        width: 100%;
+        margin: auto;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            text-align: center;
+        }
+        >img{
+            color: #fff;
+            width: 80px;
+            filter: grayscale(90%);
+        }
+    } // Header
+    .Container{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        .certifi{
+            height: 250px;
+            width: fit-content;
+            display: flex;
+            margin: 0 20px;
+            justify-content: center;
+            img{
+                height: 250px;
+                transition: height 1s;
+                box-shadow: rgba(255,255,255, 0.2) 0px 8px 24px;
+                cursor: pointer;
+            }
+            img:hover{
+                height: 255px;
+            }
+        }
+        .certifi:nth-child(odd){
+            img{
+                margin-top:30px;
+            }
+        }
+        
+    }
+  }//Certificate_Page
+  @media only screen and (max-width: 1225px) {
+    .Certificate_Page{
+        .Container{
+            .certifi{
+                img{
+                    height: 200px;
+                }
+            }
+        }
+    }//Certificate_Page
+}
+@media only screen and (max-width: 1000px) {
+    .Certificate_Page{
+        .Container{
+            .certifi{
+                img{
+                    height: 150px;
+                }
+            }
+        }
+    }//Certificate_Page
+}
+  @media only screen and (max-width: 825px) {
+    .Certificate_Page{
+        height: fit-content;
+        .Container{
+            // padding: 20px 0;
+            flex-direction: column;
+            .certifi{
+                img{
+                    height: 250px;
+                }
+            }
+            .certifi:nth-child(odd){
+                img{
+                    margin: 10px 0;
+                }
+            }
+            .certifi{
+                height: fit-content;
+                img{
+                    margin: 10px 0;
+                }
+            }   
+
+        }
+      }//Certificate_Page
+}
+  @media only screen and (max-width: 525px) {
+    .Certificate_Page{
+        height: fit-content;
+
+        .Container{
+
+            flex-direction: column;
+            .certifi:nth-child(odd){
+                img{
+                    // margin-top:0;
+                }
+            }   
+            .certifi{
+                img{
+                    width: 50vw;
+                    height: fit-content;
+                }
+            }   
+        }
+      }//Certificate_Page
+}

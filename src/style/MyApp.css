@@ -1,0 +1,2049 @@
+.AppNav {
+  position: fixed;
+  background-color: #28282c;
+  width: 100vw;
+  z-index: 100;
+  /* Toggle switch */
+}
+.AppNav .navbar-nav span {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.AppNav .Toggle_switch {
+  flex: 1;
+  justify-content: right;
+  text-align: end;
+  display: flex;
+  margin-right: 0;
+}
+.AppNav .Toggle_switch p {
+  color: #fff;
+  margin: 0 16px 0 0px;
+  background-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 1em;
+}
+.AppNav .Toggle_switch p:first-child {
+  margin-left: 5px;
+}
+.AppNav .Toggle_switch p:nth-child(2) {
+  color: gray;
+}
+
+.Waitting .container .Ring:nth-child(3), .Waitting .container .Ring:nth-child(2), .Waitting .container .Ring:nth-child(1) {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: -30px;
+  border-radius: 50%;
+}
+
+.Waitting .container .Ring:nth-child(3)::before, .Waitting .container .Ring:nth-child(2)::before, .Waitting .container .Ring::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.Waitting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  width: calc(100vw - 350px);
+  position: absolute;
+  z-index: 200;
+}
+.Waitting * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.Waitting .container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Waitting .container .Ring:nth-child(1) {
+  animation: animate 3s linear infinite;
+  border-right: 4px solid #24ecff;
+  border-bottom: 4px solid transparent;
+}
+.Waitting .container .Ring::before {
+  bottom: 13px;
+  right: 5px;
+  background: #24ecff;
+  box-shadow: 0px 0px 0px 5px rgba(36, 236, 255, 0.2), 0px 0px 0px 10px rgba(36, 236, 255, 0.1333333333), 0px 0px 0px 10px rgba(36, 236, 255, 0.0666666667), 0px 0px 20px 0 #24ecff, 0px 0px 50px 0 #24ecff;
+}
+.Waitting .container .Ring:nth-child(2) {
+  animation: animate2 3s linear infinite;
+  border-left: 4px solid #93ff2d;
+  border-bottom: 4px solid transparent;
+}
+.Waitting .container .Ring:nth-child(2)::before {
+  top: initial;
+  bottom: 13px;
+  left: 5px;
+  background: #93ff2d;
+  box-shadow: 0px 0px 0px 5px rgba(147, 255, 45, 0.2), 0px 0px 0px 10px rgba(147, 255, 45, 0.1333333333), 0px 0px 0px 10px rgba(147, 255, 45, 0.0666666667), 0px 0px 20px 0 #93ff2d, 0px 0px 50px 0 #93ff2d;
+}
+.Waitting .container .Ring:nth-child(3) {
+  position: absolute;
+  top: -66.66px;
+  animation: animate2 3s linear -1s infinite;
+  border-left: 4px solid #e41cf8;
+  border-bottom: 4px solid transparent;
+}
+.Waitting .container .Ring:nth-child(3)::before {
+  top: initial;
+  bottom: 13px;
+  left: 5px;
+  background: #e41cf8;
+  box-shadow: 0px 0px 0px 5px rgba(228, 28, 248, 0.2), 0px 0px 0px 10px rgba(228, 28, 248, 0.1333333333), 0px 0px 0px 10px rgba(228, 28, 248, 0.0666666667), 0px 0px 20px 0 #e41cf8, 0px 0px 50px 0 #e41cf8;
+}
+.Waitting .Text {
+  position: absolute;
+  width: calc(100vw - 350px);
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 1em;
+  font-family: consolas;
+  bottom: -100px;
+  letter-spacing: 0.15em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.Waitting .Text p {
+  background-color: transparent;
+}
+.Waitting .Text span {
+  margin-bottom: -6px;
+  padding: 0;
+}
+.Waitting .Text span:nth-child(2) {
+  animation: dot 1.5s linear infinite;
+}
+.Waitting .Text span:nth-child(3) {
+  animation: dot 1.5s linear infinite;
+  animation-delay: 0.5s;
+}
+.Waitting .Text span:nth-child(4) {
+  animation: dot 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes dot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .Waitting {
+    width: 100vw;
+  }
+}
+.Page_Skill {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: #28282c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Page_Skill .Header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 60px;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Page_Skill .Header h1 {
+  text-align: center;
+}
+.Page_Skill .Header > img {
+  color: #fff;
+  width: 80px;
+  filter: grayscale(90%);
+}
+.Page_Skill .Container {
+  width: 80%;
+}
+.Page_Skill .Container .ProgressSkill {
+  width: 46%;
+  margin: 15px 2%;
+  display: inline-block;
+}
+.Page_Skill .Container .ProgressSkill p {
+  padding: 0;
+  margin: 0;
+}
+.Page_Skill .Container .ProgressSkill .ProgressSkill_Percent {
+  text-align: end;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+.Page_Skill .Container .ProgressSkill .progress {
+  height: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+  .Page_Skill {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Page_Skill .Header {
+    margin: 0 0 20px 0;
+  }
+  .Page_Skill .Container {
+    width: 90%;
+    padding-bottom: 50px;
+  }
+  .Page_Skill .Container .ProgressSkill {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .Page_Skill .Container .ProgressSkill p {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .Page_Skill .Container .ProgressSkill p:first-child {
+    width: 80%;
+  }
+}
+.Page_Home {
+  width: 100vw;
+  height: 100vh;
+  background-color: #28282c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.Page_Home .Page_Home_Text {
+  width: 60%;
+  padding: 0 100px;
+}
+.Page_Home .Page_Home_Text h2 {
+  margin: 0px 0 30px 0;
+}
+.Page_Home .Page_Home_Text img {
+  filter: invert(100%);
+  width: 70px;
+  margin-left: 0px;
+  padding-bottom: 15px;
+  animation: wave-animation 3s linear infinite;
+  transform-origin: bottom center;
+}
+.Page_Home .Page_Home_Image {
+  float: right;
+  width: 40%;
+}
+.Page_Home .Page_Home_Image img {
+  filter: grayscale(0%);
+  width: 90%;
+  animation: picture-animation 5s linear infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes picture-animation {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+@media only screen and (max-width: 750px) {
+  .Page_Home .Page_Home_Text {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Page_Home {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column-reverse;
+  }
+  .Page_Home .Page_Home_Text {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Page_Home .Page_Home_Text h2 {
+    margin: 0px 0 20px 0;
+    font-size: 20px;
+  }
+  .Page_Home .Page_Home_Text img {
+    filter: invert(100%);
+    width: 70px;
+    margin-left: 0px;
+    padding-bottom: 15px;
+    animation: wave-animation 3s linear infinite;
+    transform-origin: bottom center;
+  }
+  .Page_Home .Page_Home_Image {
+    width: 80%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .Page_Home .Page_Home_Image img {
+    filter: grayscale(0%);
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .Page_Home {
+    height: 100vh;
+    flex-direction: column-reverse;
+  }
+  .Page_Home .Page_Home_Text {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Page_Home .Page_Home_Text h2 {
+    margin: 0px 0 20px 0;
+    font-size: 20px;
+  }
+  .Page_Home .Page_Home_Text img {
+    filter: invert(100%);
+    width: 70px;
+    margin-left: 0px;
+    padding-bottom: 15px;
+    animation: wave-animation 3s linear infinite;
+    transform-origin: bottom center;
+  }
+  .Page_Home .Page_Home_Image {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .Page_Home .Page_Home_Image img {
+    filter: grayscale(0%);
+    width: 70%;
+  }
+}
+.Page_Intro {
+  background-color: #28282c;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 30px;
+  color: #fff;
+}
+.Page_Intro .Header {
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Page_Intro .Header h1 {
+  text-align: center;
+}
+.Page_Intro .Header > img {
+  color: #fff;
+  width: 80px;
+  filter: grayscale(90%);
+}
+.Page_Intro .Container {
+  display: flex;
+  justify-content: center;
+}
+.Page_Intro .Container .Avatar_name_image {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+.Page_Intro .Container .Avatar_name_image span {
+  font-size: 30px;
+}
+.Page_Intro .Container .Avatar_name_image .AvatarImage {
+  max-height: 350px;
+  border-radius: 10px;
+}
+.Page_Intro .Container .Info {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 60%;
+  padding-right: 10px;
+}
+.Page_Intro .Container .Info li {
+  color: #dddddd;
+}
+.Page_Intro .Container .Info li b {
+  color: #eaeaeb;
+}
+.Page_Intro .Container .Info .li_half li {
+  list-style: none;
+  display: inline-block;
+  width: 45%;
+}
+.Page_Intro .Container .Info .li_full li {
+  list-style: none;
+  display: inline-block;
+  width: 90%;
+}
+.Page_Intro .Container .Info h2 {
+  color: #f7f7f7;
+  margin: 0 0 5px 0px;
+}
+.Page_Intro .Container .Info div {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  .Page_Intro .Container .Avatar_name_image {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  .Page_Intro .Container .Avatar_name_image .AvatarImage {
+    max-height: 250px;
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .Page_Intro .Container .Info {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Page_Intro .Container .Info .li_half li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info .li_full li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info h2 {
+    margin: 0 0 10px 0px;
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .Page_Intro {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 30px;
+  }
+  .Page_Intro .Header {
+    padding: 40px 0 20px 0;
+  }
+  .Page_Intro .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Page_Intro .Container .Avatar_name_image {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .Page_Intro .Container .Avatar_name_image .AvatarImage {
+    max-height: 250px;
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .Page_Intro .Container .Info {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Page_Intro .Container .Info .li_half li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info .li_full li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info h2 {
+    margin: 0 0 10px 0px;
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .Page_Intro {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 30px;
+  }
+  .Page_Intro .Header {
+    padding: 40px 0 20px 0;
+  }
+  .Page_Intro .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Page_Intro .Container .Avatar_name_image {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .Page_Intro .Container .Avatar_name_image .AvatarImage {
+    max-height: 250px;
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .Page_Intro .Container .Info {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0 5%;
+  }
+  .Page_Intro .Container .Info .li_half li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info .li_full li {
+    width: 100%;
+  }
+  .Page_Intro .Container .Info h2 {
+    margin: 0 0 10px 0px;
+    font-size: 25px;
+  }
+}
+.Todo {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.Todo > p {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 0 10px 5px 10px;
+  transition: 0.5s;
+  width: 260px;
+  text-align: center;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.Todo .TitleTodo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+.Todo .TitleTodo .input-group button {
+  height: 44px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 10px;
+}
+.Todo .TitleTodo .TodoList {
+  margin-top: 10px;
+  height: 400px;
+  overflow: auto;
+  width: 100%;
+  padding-right: 15px;
+}
+.Todo .TitleTodo .TodoList p {
+  word-break: break-all;
+  background: transparent;
+  color: white;
+  height: 30px;
+  text-align: left;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 15px;
+  display: flex;
+  width: 100%;
+  text-transform: capitalize;
+}
+.Todo .TitleTodo .TodoList .TodoItem {
+  display: flex;
+  border-bottom: 2px solid white;
+  margin-top: 10px;
+}
+.Todo .TitleTodo .TodoList .TodoItem .done {
+  text-decoration: line-through;
+}
+.Todo .TitleTodo .TodoList .TodoItem .btn-undone {
+  visibility: hidden;
+}
+.Todo input {
+  height: 44px;
+}
+.Todo button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+  .Todo {
+    width: 100vw;
+  }
+  .Todo .TitleTodo {
+    width: 85%;
+  }
+  .Todo .TitleTodo .TodoList {
+    height: 500px;
+    padding-right: 0px;
+  }
+  .Todo .TitleTodo .TodoList .TodoItem {
+    display: flex;
+    border-bottom: 2px solid white;
+    margin-top: 10px;
+  }
+  .Todo .TitleTodo .TodoList .TodoItem p {
+    margin: 0;
+    line-height: 40px;
+  }
+}
+.RealTimeClock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.RealTimeClock > p {
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  margin-bottom: 100px;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.RealTimeClock .Clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.RealTimeClock .Clock Span {
+  position: absolute;
+  inset: 10px;
+  color: white;
+  text-align: center;
+}
+.RealTimeClock .Clock .One {
+  transform: rotate(30deg);
+}
+.RealTimeClock .Clock .One b {
+  display: inline-block;
+  transform: rotate(-30deg);
+}
+.RealTimeClock .Clock .Two {
+  transform: rotate(60deg);
+}
+.RealTimeClock .Clock .Two b {
+  display: inline-block;
+  transform: rotate(-60deg);
+}
+.RealTimeClock .Clock .Three {
+  transform: rotate(90deg);
+}
+.RealTimeClock .Clock .Three b {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+.RealTimeClock .Clock .Four {
+  transform: rotate(120deg);
+}
+.RealTimeClock .Clock .Four b {
+  display: inline-block;
+  transform: rotate(-120deg);
+}
+.RealTimeClock .Clock .Five {
+  transform: rotate(150deg);
+}
+.RealTimeClock .Clock .Five b {
+  display: inline-block;
+  transform: rotate(-150deg);
+}
+.RealTimeClock .Clock .Six {
+  transform: rotate(180deg);
+}
+.RealTimeClock .Clock .Six b {
+  display: inline-block;
+  transform: rotate(-180deg);
+}
+.RealTimeClock .Clock .Seven {
+  transform: rotate(210deg);
+}
+.RealTimeClock .Clock .Seven b {
+  display: inline-block;
+  transform: rotate(-210deg);
+}
+.RealTimeClock .Clock .Eight {
+  transform: rotate(240deg);
+}
+.RealTimeClock .Clock .Eight b {
+  display: inline-block;
+  transform: rotate(-240deg);
+}
+.RealTimeClock .Clock .Nine {
+  transform: rotate(270deg);
+}
+.RealTimeClock .Clock .Nine b {
+  display: inline-block;
+  transform: rotate(-270deg);
+}
+.RealTimeClock .Clock .Ten {
+  transform: rotate(300deg);
+}
+.RealTimeClock .Clock .Ten b {
+  display: inline-block;
+  transform: rotate(-300deg);
+}
+.RealTimeClock .Clock .Elevent {
+  transform: rotate(330deg);
+}
+.RealTimeClock .Clock .Elevent b {
+  display: inline-block;
+  transform: rotate(-330deg);
+}
+.RealTimeClock .Clock .Twelve {
+  transform: rotate(360deg);
+}
+.RealTimeClock .Clock .Twelve b {
+  display: inline-block;
+  transform: rotate(-360deg);
+}
+.RealTimeClock .Clock .circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: bottom;
+}
+.RealTimeClock .Clock .circle i {
+  position: absolute;
+  transform-origin: bottom;
+}
+.RealTimeClock .Clock .Circle1 {
+  width: 80px;
+  height: 80px;
+}
+.RealTimeClock .Clock .Circle1 i {
+  position: absolute;
+  height: 38px;
+  top: 1.5px;
+  background: #ff2972;
+  z-index: 3;
+  width: 4px;
+}
+.RealTimeClock .Clock .Circle2 {
+  width: 100px;
+  height: 100px;
+}
+.RealTimeClock .Clock .Circle2 i {
+  position: absolute;
+  height: 48px;
+  background: #fee800;
+  top: 1.5px;
+  z-index: 2;
+  width: 3px;
+}
+.RealTimeClock .Clock .Circle3 {
+  width: 120px;
+  height: 120px;
+}
+.RealTimeClock .Clock .Circle3 i {
+  position: absolute;
+  height: 58px;
+  background: #04fc43;
+  z-index: 1;
+  width: 2px;
+  top: 1.5px;
+}
+.RealTimeClock .Clock::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  z-index: 100;
+  background: white;
+  width: 8px;
+  height: 8px;
+  transform: translateY(2px);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.RealTimeClock .Digital {
+  position: relative;
+  width: 170px;
+  height: 50px;
+  box-shadow: 5px 25px 35px rgba(0, 0, 0, 0.25), inset 1px 1px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  display: flex;
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.RealTimeClock .Digital span {
+  position: relative;
+  margin: 10px;
+  color: #ff2972;
+}
+.RealTimeClock .Digital span:nth-child(even) {
+  color: white;
+  margin: 0;
+}
+.RealTimeClock .Digital span:nth-child(3) {
+  color: #fee800;
+}
+.RealTimeClock .Digital span:nth-child(5) {
+  color: #04fc43;
+}
+.RealTimeClock .Digital span:nth-child(6) {
+  color: white;
+  font-size: 12px;
+}
+
+.ColorfulGlowingLiquid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ColorfulGlowingLiquid > p {
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  margin-bottom: 100px;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.ColorfulGlowingLiquid .Circle {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transform-origin: bottom center;
+  animation: animateBow 4s linear infinite;
+}
+.ColorfulGlowingLiquid .Circle::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -7%;
+  border: 10px solid #444;
+  border-radius: 50%;
+  box-shadow: 0 6px #222;
+}
+.ColorfulGlowingLiquid .Circle::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: rgba(255, 255, 255, 0.05);
+  width: 90px;
+  height: 45px;
+  border-radius: 50%;
+}
+.ColorfulGlowingLiquid .Liqiud {
+  position: absolute;
+  top: 50%;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: #41c1fb;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  filter: drop-shadow(0 0 80px #41c1fb);
+  animation: animateLiquid 4s linear infinite;
+  transform-origin: top center;
+}
+.ColorfulGlowingLiquid .Liqiud::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  /*  transform: translateX(50%);*/
+  width: 100%;
+  height: 20px;
+  background: #1fa4e0;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 80px #41c1fb);
+}
+.ColorfulGlowingLiquid .Shadow {
+  width: 200px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animateBow {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes animateLiquid {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.CaroApp {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
+}
+.CaroApp .game-info {
+  margin-left: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 30%;
+}
+.CaroApp .game-info p {
+  margin-bottom: 14px;
+  line-height: 36px;
+  background-color: transparent;
+  color: white;
+  width: 70%;
+  padding-right: 10px;
+  padding-top: 0;
+  display: inline-block;
+  font-size: 20px;
+  padding-left: 40px;
+}
+.CaroApp .game-info ol {
+  overflow-y: auto;
+  height: 408px;
+}
+.CaroApp .game-info ol li {
+  color: white;
+}
+.CaroApp .game-info ol li button {
+  margin: 5px 0 5px 10px;
+}
+.CaroApp .game-info > button {
+  line-height: 5px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.CaroApp .game-board p {
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.CaroApp .game-board .board-row .square {
+  background: #444;
+  border: 2px solid #28282c;
+  float: left;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  height: 34px;
+  width: 34px;
+}
+.CaroApp .game-board .board-row .square:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .CaroApp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .CaroApp .game-info {
+    width: 100%;
+  }
+  .CaroApp .game-info p {
+    margin-top: 20px;
+    line-height: 15px;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+  .CaroApp .game-info ol {
+    height: 315px;
+  }
+  .CaroApp .game-info ol li button {
+    font-size: 14px;
+    width: 150px;
+  }
+  .CaroApp .game-info > button {
+    line-height: 5px;
+    height: 30px;
+    border-radius: 3px;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  .CaroApp .game-board .board-row .square {
+    border: 2px solid #28282c;
+    padding: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 25px;
+    width: 25px;
+    margin: 0.5px;
+  }
+}
+.WeatherApp-container::-webkit-scrollbar {
+  display: none;
+}
+
+.WeatherApp {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  height: 100vh;
+  max-height: 700px;
+  padding: 0 0 10px 0;
+  margin: 0;
+  color: white;
+}
+.WeatherApp p, .WeatherApp span {
+  cursor: default;
+}
+.WeatherApp .WeatherApp-container {
+  width: 350px;
+  min-width: 350px;
+  background: no-repeat local top;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+  border: 2px solid white;
+}
+.WeatherApp .WeatherApp-container .WeatherDataError > p {
+  background-color: transparent;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.WeatherApp .WeatherApp-container .SearchSuggesst {
+  position: absolute;
+  width: inherit;
+  padding-left: 60px;
+  z-index: 10;
+  margin-top: 5px;
+}
+.WeatherApp .WeatherApp-container .SearchSuggesst span {
+  color: white;
+  display: block;
+  padding: 3px 0 3px 15px;
+  margin-right: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.WeatherApp .WeatherApp-container .SearchSuggesst span:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form {
+  margin-top: 10px;
+  justify-content: center;
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form input {
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  cursor: default;
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form input:focus {
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form svg {
+  height: 30px;
+  width: 18px;
+  border-bottom: 1px solid white;
+  color: white;
+  line-height: 15px;
+  cursor: pointer;
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form input::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+.WeatherApp .WeatherApp-container .WeatherApp-hearder form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+.WeatherApp .WeatherApp-container .WeatherData {
+  height: calc(100% - 80px);
+}
+.WeatherApp .WeatherApp-container .WeatherData span {
+  background-color: transparent;
+  width: 145px;
+  display: inline-block;
+}
+.WeatherApp .WeatherApp-container .WeatherData b {
+  background-color: transparent;
+  width: 160px;
+  display: inline-block;
+  font-weight: normal;
+  height: 100%;
+  vertical-align: top;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherTemp .CityName {
+  font-size: 20px;
+  width: 100%;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherTemp .temp {
+  font-size: 35px;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 40px !important;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherTemp p {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 150px;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 10px;
+  width: 346px;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title {
+  border-bottom: 1px solid #fff;
+  width: 90%;
+  margin-bottom: 5px;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title > p {
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px 0 0 0;
+  margin-bottom: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: start;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title svg {
+  color: white;
+  float: right;
+  width: 32px;
+  height: 22px;
+  cursor: pointer;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title svg:hover {
+  color: rgb(243, 224, 224);
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title button {
+  padding: 0;
+  margin: 0;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title button:focus {
+  outline: none;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title button:nth-child(5) svg {
+  height: 18px;
+  margin-bottom: 4px;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo .WeatherInfo-Title button:nth-child(7) svg {
+  height: 18px;
+  margin-bottom: 4px;
+}
+.WeatherApp .WeatherApp-container .WeatherData .WeatherInfo > div {
+  width: 90%;
+}
+.WeatherApp .CustomWeather {
+  margin-left: 20px;
+}
+.WeatherApp .CustomWeather .MuiSlider-root span {
+  color: #fff;
+}
+.WeatherApp .CustomWeather .MuiSlider-mark {
+  display: none;
+}
+.WeatherApp .CustomWeather .MuiSlider-thumb {
+  box-shadow: none !important;
+}
+.WeatherApp .CustomWeather .MuiSlider-thumb:hover {
+  box-shadow: 0px 0px 0px 8px rgba(199, 199, 199, 0.16) !important;
+}
+.WeatherApp .CustomWeather button {
+  margin: 5px;
+}
+.WeatherApp .CustomWeather .MuiBox-root {
+  margin-left: 10px;
+}
+.WeatherApp .CustomWeather h3 {
+  text-align: center;
+}
+.WeatherApp .CustomWeather > span {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+
+@media only screen and (max-width: 425px) {
+  .WeatherApp {
+    justify-content: center;
+  }
+  .WeatherApp .CustomWeather {
+    display: none;
+  }
+}
+.MusicApp {
+  background-color: #28282c;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.MusicApp .MusicSideBar {
+  width: 350px;
+  background-color: #28282c;
+}
+.MusicApp .MusicSideBar .SideTitle {
+  height: 60px;
+  width: 100%;
+  display: flex;
+}
+.MusicApp .MusicSideBar .SideTitle > a img {
+  width: 110px;
+  margin: 0px 0 15px 30px;
+}
+.MusicApp .MusicSideBar .SideTitle b {
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 35px;
+  margin-left: 35px;
+}
+.MusicApp .MusicSideBar .SideTitleLine {
+  height: 3px;
+  background-color: white;
+  width: 80%;
+  margin: 0 10%;
+}
+.MusicApp .MusicSideBar .SideItemList {
+  margin-top: 30px;
+}
+.MusicApp .MusicSideBar .SideItemList .SideItem {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.MusicApp .MusicSideBar .SideItemList .SideItem svg {
+  margin: 0 10px 0 25px;
+  width: 25px;
+  height: 25px;
+}
+.MusicApp .MusicSideBar .SideItemList .SideItem span {
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 18px;
+}
+.MusicApp .MusicSideBar .SideItemList .SideItem:hover {
+  background-color: #e9ecef;
+  color: black;
+}
+.MusicApp .MusicSideBar .SideItemList .SideItem.active {
+  background-color: #e9ecef;
+  color: black;
+}
+.MusicApp .MusicContainer {
+  width: 100%;
+}
+.MusicApp .MusicContainer .TableLoading {
+  text-align: center;
+  font-size: 25px;
+}
+.MusicApp .MusicContainer .SideItemList_Mobile {
+  display: none;
+}
+.MusicApp .MusicContainer .Container_Header {
+  display: flex;
+}
+.MusicApp .MusicContainer .Container_Header .Search {
+  width: 45%;
+  margin: 0px 0px 20px 48px;
+  margin-right: auto;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchBox span {
+  border-radius: 0;
+  cursor: pointer;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchBox span svg {
+  height: 20px;
+  width: 20px;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchBox input {
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchSuggestion {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  display: none;
+  width: inherit;
+  margin-top: 5px;
+  padding: 7px 0;
+  border-radius: 3px;
+  z-index: 10;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchSuggestion p {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.MusicApp .MusicContainer .Container_Header .Search .SearchSuggestion p:hover {
+  background-color: #d4d1d1;
+}
+.MusicApp .MusicContainer .Container_Header .Sort {
+  width: 45%;
+  margin: 0px 48px 20px 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group {
+  border: 1px solid #ced4da;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group button {
+  border-radius: 0%;
+  border: none;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  color: #28282c;
+  background-color: white;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group button:hover {
+  background-color: rgb(212, 209, 209);
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group button.dropdown-toggle {
+  min-width: 120px;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group span {
+  border-radius: 0%;
+  border: none;
+  background-color: white;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group .dropdown-item:focus {
+  background-color: rgb(212, 209, 209);
+  color: #28282c;
+}
+.MusicApp .MusicContainer .Container_Header .Sort .input-group .dropdown-item:hover {
+  background-color: rgb(212, 209, 209);
+}
+.MusicApp .MusicContainer .TableBox {
+  min-height: 350px;
+}
+.MusicApp .MusicContainer .TableBox table {
+  margin: 0 48px;
+  width: calc(100% - 96px);
+}
+.MusicApp .MusicContainer .TablePanigation {
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+}
+.MusicApp .MusicContainer .TablePanigation li button {
+  outline: none;
+  background-color: white;
+}
+.MusicApp .MusicContainer .TablePanigation li button.Mui-selected {
+  background-color: #28282c;
+  color: #fff;
+  border: 1px solid white;
+}
+.MusicApp .MusicContainer .TablePanigation li div {
+  color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  .MusicApp .MusicContainer .Container_Header {
+    flex-direction: column;
+    padding-left: 48px;
+  }
+  .MusicApp .MusicContainer .Container_Header .Search {
+    width: 400px;
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .MusicApp .MusicSideBar {
+    display: none;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile .SideItem {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile .SideItem svg {
+    margin: 0 10px 0 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile .SideItem span {
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 18px;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile .SideItem:hover {
+    background-color: #e9ecef;
+    color: black;
+  }
+  .MusicApp .MusicContainer .SideItemList_Mobile .SideItem.active {
+    background-color: #e9ecef;
+    color: black;
+  }
+  .MusicApp .MusicContainer .Container_Header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 0 5%;
+  }
+  .MusicApp .MusicContainer .Container_Header .Search {
+    width: 330px;
+  }
+  .MusicApp .MusicContainer table {
+    margin: 0 5%;
+    width: 90%;
+  }
+  .MusicApp .MusicContainer table th {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .MusicApp .MusicContainer table td {
+    font-size: 11px;
+    padding: 6px;
+  }
+  .MusicApp .MusicContainer .TablePanigation li button {
+    height: 25px;
+    width: 25px;
+    min-height: 25px;
+    min-width: 25px;
+    line-height: 20px;
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .MusicApp .MusicContainer .Container_Header {
+    flex-direction: column;
+  }
+  .MusicApp .MusicContainer .Container_Header .Search {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .MusicApp .MusicContainer .TableBox table {
+    margin: 0 5%;
+    width: 90%;
+  }
+  .MusicApp .MusicContainer .TableBox table td {
+    height: 46px;
+  }
+}
+.LinkApp {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.LinkApp a {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.7), 1px 2px 4px 0px rgba(17, 17, 17, 0.7), 2px 4px 8px 0px rgba(17, 17, 17, 0.7), 2px 4px 16px 0px rgba(17, 17, 17, 0.7);
+}
+.LinkApp a img {
+  width: 300px;
+}
+.LinkApp a span {
+  color: black;
+  font-size: 30px;
+}
+
+.Project {
+  background-color: #28282c;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 30px;
+  color: #fff;
+}
+.Project .Header {
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Project .Header h1 {
+  text-align: center;
+}
+.Project .Header > img {
+  color: #fff;
+  width: 80px;
+  filter: grayscale(90%);
+}
+.Project .Container {
+  display: flex;
+  width: 100vw;
+}
+.Project .Container .ProjectBar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  width: 320px;
+  min-width: 320px;
+  text-align: center;
+  pointer-events: none;
+  /* Project Title */
+}
+.Project .Container .ProjectBar .ProjectListTitle {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #28282c;
+  z-index: 50;
+}
+.Project .Container .ProjectBar .ProjectListTitle p {
+  position: relative;
+  margin-bottom: 0;
+  cursor: default;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 0 10px 10px 10px;
+  width: 220px;
+  text-align: center;
+}
+.Project .Container .ProjectBar .ProjectListTitle > svg {
+  color: white;
+  height: 35px;
+  width: 35px;
+  margin-right: 20px;
+  margin-bottom: 1px;
+  background-color: transparent;
+  cursor: pointer;
+  pointer-events: all;
+  transform: translateY(170%);
+}
+.Project .Container .ProjectBar .ProjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: auto;
+  padding: 10px 0 10px 20px;
+  background-color: #28282c;
+  padding-right: 20px;
+  z-index: 50;
+  pointer-events: all;
+  /* Project Color */
+}
+.Project .Container .ProjectBar .ProjectList a.App-Button1 {
+  --bg-clr-1: #1e9bff;
+}
+.Project .Container .ProjectBar .ProjectList a.App-Button2 {
+  --bg-clr-1: #ff1867;
+}
+.Project .Container .ProjectBar .ProjectList a.App-Button3 {
+  --bg-clr-1: #6eff3e;
+}
+.Project .Container .ProjectBar .ProjectList a.App-Button4 {
+  --bg-clr-1: #ddff19;
+}
+.Project .Container .ProjectBar .ProjectList .DisableProject {
+  background-color: #444444;
+  cursor: default;
+}
+.Project .Container .ProjectBar .ProjectList .DisableProject span {
+  color: #888888;
+}
+.Project .Container .ProjectBar .ProjectList .DisableProject i::before {
+  background-color: #444444;
+}
+.Project .Container .ProjectBar .ProjectList .DisableProject i::after {
+  background-color: #444444;
+}
+.Project .Container .ProjectBar .ProjectList .AbleProject:hover {
+  letter-spacing: 0.15em;
+  background: var(--bg-clr-1);
+  color: var(--bg-clr-1);
+  box-shadow: 0 0 5px var(--bg-clr-1);
+  cursor: pointer;
+}
+.Project .Container .ProjectBar .ProjectList .AbleProject:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.Project .Container .ProjectBar .ProjectList .AbleProject:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.Project .Container .ProjectBar .ProjectList a {
+  position: relative;
+  background: #444;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 10px 10px;
+  transition: 0.5s;
+  width: 260px;
+  text-align: center;
+  pointer-events: all;
+}
+.Project .Container .ProjectBar .ProjectList a span {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  font-size: 18px;
+  bottom: 2px;
+  text-transform: capitalize;
+}
+.Project .Container .ProjectBar .ProjectList a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.Project .Container .ProjectBar .ProjectList a i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--bg-clr-1);
+  top: -3.5px;
+  left: 80%;
+  width: 10px;
+  height: 5px;
+  background: #27282c;
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+.Project .Container .ProjectBar .ProjectList a i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--bg-clr-1);
+  bottom: -3.5px;
+  left: 20%;
+  width: 10px;
+  height: 5px;
+  background: #27282c;
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+.Project .Container .ProjectBar .ProjectList a::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+@media only screen and (max-width: 425px) {
+  .Project {
+    padding-top: 0;
+  }
+  .Project .Container .ProjectBar {
+    width: 100vw;
+  }
+  .Project .Container .ProjectBar .ProjectListTitle p {
+    width: 100%;
+    padding-left: 20%;
+  }
+  .Project .Container .ProjectBar .ProjectList {
+    align-items: center;
+  }
+}
+.Certificate_Page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #28282c;
+  color: #fff;
+  padding-top: 60px;
+}
+.Certificate_Page .Header {
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Certificate_Page .Header h1 {
+  text-align: center;
+}
+.Certificate_Page .Header > img {
+  color: #fff;
+  width: 80px;
+  filter: grayscale(90%);
+}
+.Certificate_Page .Container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Certificate_Page .Container .certifi {
+  height: 250px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin: 0 20px;
+  justify-content: center;
+}
+.Certificate_Page .Container .certifi img {
+  height: 250px;
+  transition: height 1s;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.Certificate_Page .Container .certifi img:hover {
+  height: 255px;
+}
+.Certificate_Page .Container .certifi:nth-child(odd) img {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 1225px) {
+  .Certificate_Page .Container .certifi img {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .Certificate_Page .Container .certifi img {
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 825px) {
+  .Certificate_Page {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Certificate_Page .Container {
+    flex-direction: column;
+  }
+  .Certificate_Page .Container .certifi img {
+    height: 250px;
+  }
+  .Certificate_Page .Container .certifi:nth-child(odd) img {
+    margin: 10px 0;
+  }
+  .Certificate_Page .Container .certifi {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Certificate_Page .Container .certifi img {
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .Certificate_Page {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Certificate_Page .Container {
+    flex-direction: column;
+  }
+  .Certificate_Page .Container .certifi img {
+    width: 50vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.Contact_Page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #28282c;
+  color: #fff;
+  padding-top: 60px;
+}
+.Contact_Page .Header {
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Contact_Page .Header h1 {
+  text-align: center;
+}
+.Contact_Page .Header > img {
+  color: #fff;
+  width: 80px;
+  filter: grayscale(90%);
+}
+.Contact_Page .Container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.Contact_Page .Container .Card {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  background-color: #434347;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Contact_Page .Container .Card .Circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #28282c;
+}
+.Contact_Page .Container .Card .Big_Circle {
+  margin: 20px 0 10px 0;
+  width: 70px;
+  height: 70px;
+}
+.Contact_Page .Container .Card .Big_Circle svg {
+  height: 30px;
+  width: 30px;
+}
+.Contact_Page .Container .Card .Small_Circle {
+  width: 40px;
+  height: 40px;
+  margin: 10px 5px;
+}
+.Contact_Page .Container .Card .Small_Circle a {
+  outline: none;
+  color: #fff;
+  height: 25px;
+}
+.Contact_Page .Container .Card .Small_Circle svg {
+  height: 25px;
+  width: 25px;
+}
+.Contact_Page .Container .Card .Card_socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 425px) {
+  .Contact_Page {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 50px;
+  }
+  .Contact_Page .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Contact_Page .Container .Card {
+    height: 180px;
+  }
+}
+.modal-dialog {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.modal-dialog .modal-content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal-dialog .modal-content img {
+  height: 500px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 1050px) {
+  .modal-dialog .modal-content img {
+    width: 75vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .modal-dialog .modal-content img {
+    width: 85vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .modal-dialog .modal-content img {
+    width: 95vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.BKApp {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px #dfdfdf inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}/*# sourceMappingURL=MyApp.css.map */

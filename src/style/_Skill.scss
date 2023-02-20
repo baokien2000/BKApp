@@ -1,0 +1,79 @@
+.Page_Skill {
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: #28282c ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .Header{
+        width: 100%;
+        height: fit-content;
+        padding-top: 60px;
+        margin: 0 0 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            text-align: center;
+        }
+        >img{
+            color: #fff;
+            width: 80px;
+            filter: grayscale(90%);
+        }
+    } //Header
+    .Container{
+        width: 80%;
+        // background-color: yellow;
+        .ProgressSkill{
+            // background-color: red;
+
+            width: 46%;
+            margin: 15px 2%;
+            display: inline-block;
+            // margin: auto;
+            p{
+                padding: 0;
+                margin: 0;
+            }
+
+            .ProgressSkill_Percent{
+                text-align: end;
+                padding-right: 20px;
+                padding-bottom: 5px;
+            }
+            .progress{
+                height: 10px;
+            }
+        }
+    } // .Coitainer
+}
+@media only screen and (max-width: 425px) {
+    .Page_Skill {
+        height: fit-content ;
+        .Header{
+            margin: 0 0 20px 0;
+        } //Header
+
+        .Container{
+            width: 90%;
+
+            padding-bottom: 50px;
+            .ProgressSkill{    
+                width: 100%;
+                margin: 0 0 15px 0;
+
+                p{
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
+                p:first-child{
+                    width: 80%;
+                }
+                
+            }
+        } // .Coitainer
+    }
+}

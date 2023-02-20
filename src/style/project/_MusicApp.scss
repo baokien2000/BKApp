@@ -1,0 +1,443 @@
+.MusicApp{
+    background-color: #28282c;
+    // f3f5f9
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: yellow;
+    .MusicSideBar{
+        width: 350px;
+        background-color: #28282c;
+
+        .SideTitle{
+            height: 60px;
+            width: 100%;
+            // padding: 10px;
+            display: flex;
+            >a img{
+                width: 110px;
+                margin: 0px 0 15px 30px;
+            }
+            b{
+                font-weight: bold;    
+                font-size: 15px;
+                padding-top: 35px;
+                margin-left: 35px;
+            }
+
+        } // SideTitle
+
+        .SideTitleLine{
+            height: 3px;
+            background-color: white;
+            width: 80%;
+            margin: 0 10%;
+        }
+        .SideItemList{
+            margin-top: 30px;
+            .SideItem{
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                svg{
+                    margin: 0 10px 0 25px;
+                    width: 25px;
+                    height: 25px;
+                }
+                span{
+                    height: fit-content;
+                    font-size: 18px;
+                }
+            }
+            .SideItem:hover{
+                background-color: #e9ecef;
+                color: black;
+            }
+            .SideItem.active{
+                background-color: #e9ecef;
+                color: black;
+            }
+        
+        } // SideItemList
+        
+    } // MusicSideBar
+
+    .MusicContainer{
+        width: 100%;
+        // background-color: red;
+        .TableLoading{
+            text-align: center;
+            font-size: 25px;
+        }
+        .SideItemList_Mobile{
+            display: none;
+        }
+        .Container_Header{
+            display: flex;
+            .Search{
+                width: 45%;
+                margin: 0px 0px 20px 48px;
+                margin-right: auto;
+                .SearchBox{
+                    span{
+                        border-radius: 0;
+                        cursor: pointer;
+                        svg{
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+                    input{
+                            border-radius: 0;
+                            outline: none;
+                            box-shadow: none;
+                    }
+                } // SearchBox
+
+                .SearchSuggestion{
+                    position: absolute;
+                    background-color: #fff;
+                    color: black;
+                    display: none;
+                    width: inherit;
+                    margin-top: 5px;
+                    padding: 7px 0;
+                    border-radius: 3px;
+                    z-index: 10;
+                    p{
+                        margin: 0;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                    p:hover{
+                        background-color: #d4d1d1;
+                    }
+                } // SearchSuggestion
+
+            }
+
+            .Sort{
+                width: 45%;
+                margin: 0px 48px 20px 0px;
+                width: fit-content;
+                .input-group{
+                    border: 1px solid #ced4da;
+                
+                    button{
+                        border-radius: 0%;
+                        border: none;
+                        box-shadow: none;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        display: flex;
+                        color: #28282c;
+                        background-color: white;
+                        // min-width: 100px;
+                    }
+                    button:hover{
+                        background-color: rgb(212, 209, 209);
+                    }
+                    button.dropdown-toggle{
+                        min-width: 120px;
+                    }
+                    span{
+                        border-radius: 0%;
+                        border: none;
+                        background-color: white;
+                    }
+                    .dropdown-item:focus{
+                        background-color: rgb(212, 209, 209);
+                        color: #28282c;
+                    }
+                    .dropdown-item:hover{
+                        background-color: rgb(212, 209, 209);
+                    }
+                }
+        
+            } // Sort
+
+        } // Container_Header
+        .TableBox{
+            min-height: 350px;
+            table{
+                margin: 0 48px;
+                width: calc(100% - 96px);
+                // min-height: 400px;
+    
+            }
+        }
+  
+
+        .TablePanigation{
+            width: 100%;
+            margin-top: 10px;
+            justify-content: center;
+            display: flex;
+            li {
+                button{
+                outline: none;
+                background-color: white;
+                }
+                button.Mui-selected{
+                    background-color: #28282c;
+                    color: #fff;
+                    border: 1px solid white;
+                }
+                div{
+                    color: white;
+                }
+            }
+        } // TablePanigation
+
+    } // MusicContainer
+}
+@media only screen and (max-width: 960px) {
+    .MusicApp{
+
+        .MusicContainer{
+
+            .Container_Header{
+                flex-direction: column;
+                padding-left: 48px;
+                .Search{
+                    width: 400px;
+                    margin: 0px 0px 20px 0px;            
+                }
+                .Sort{
+                    // width: fit-content;
+                    // align-self:flex-start;
+                    // margin: 0px 0px 20px 0;
+                }
+            }
+    
+
+
+        } // MusicContainer
+    }
+    
+}
+@media only screen and (max-width: 800px) {
+    .MusicApp{
+        .MusicSideBar{
+            display: none;
+        }
+        .MusicContainer{
+
+            .SideItemList_Mobile{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 20px;
+                .SideItem{
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    svg{
+                        margin: 0 10px 0 10px;
+                        width: 25px;
+                        height: 25px;
+                    }
+                    span{
+                        height: fit-content;
+                        font-size: 18px;
+                    }
+                }
+                .SideItem:hover{
+                    background-color: #e9ecef;
+                    color: black;
+                }
+                .SideItem.active{
+                    background-color: #e9ecef;
+                    color: black;
+                }               
+            } // SideItemList_Mobile
+
+
+            .Container_Header{
+                // flex-direction: column;
+                // align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left: 0;
+                margin: 0 5%;
+                .Search{
+                    width: 330px;
+                    // margin: 0px 0px 20px 0px;            
+                }
+    
+                .Sort{
+                    // width: fit-content;
+                    // align-self:flex-end;
+                    // margin: 0px 0px 20px 0;
+                    // .input-group{
+                    //     button.dropdown-toggle{
+                    //         width: max-content;
+                    //         padding: auto;
+                    //     }
+                    // }
+            
+                }
+            }
+    
+            table{
+                margin: 0 5%;
+                width: 90%;
+                th{
+                    font-size: 11px;
+                    padding: 10px;
+                }
+                td{
+                    font-size: 11px;
+                    padding: 6px;
+                }
+        
+            }
+    
+            .TablePanigation{
+              
+                li {
+                    button{
+                
+                        height: 25px;
+                        width: 25px ;
+                        min-height: 25px;
+                        min-width: 25px;
+
+                        line-height: 20px;
+                        font-size: 11px;
+                    }
+
+                }
+            }
+
+        } // MusicContainer
+    }
+    
+}
+@media only screen and (max-width: 700px) {
+    .MusicApp{
+
+        .MusicContainer{
+
+            .Container_Header{
+                // align-items: normal;
+                flex-direction: column;
+                // padding-left: 0;
+                .Search{
+                    width: 100%;
+                    margin: 0px 0px 20px 0px;            
+                }
+                .Sort{
+                    // width: fit-content;
+                    // align-self:flex-start;
+                    // margin: 0px 0px 20px 0;
+                }
+            }
+    
+
+
+        } // MusicContainer
+    }
+}
+@media only screen and (max-width: 425px) {
+    .MusicApp{
+        .MusicSideBar{
+            // display: none;
+        }
+        .MusicContainer{
+
+            // .SideItemList_Mobile{
+            //     display: flex;
+            //     width: 100%;
+            //     justify-content: center;
+            //     margin-bottom: 20px;
+            //     .SideItem{
+            //         width: 50px;
+            //         height: 50px;
+            //         display: flex;
+            //         align-items: center;
+            //         justify-content: center;
+            //         cursor: pointer;
+            //         svg{
+            //             margin: 0 10px 0 10px;
+            //             width: 25px;
+            //             height: 25px;
+            //         }
+            //         span{
+            //             height: fit-content;
+            //             font-size: 18px;
+            //         }
+            //     }
+            //     .SideItem:hover{
+            //         background-color: #e9ecef;
+            //         color: black;
+            //     }
+            //     .SideItem.active{
+            //         background-color: #e9ecef;
+            //         color: black;
+            //     }               
+            // } // SideItemList_Mobile
+
+
+            .Container_Header{
+                // flex-direction: column;
+                // align-items: center;
+                .Search{
+                    // width: 90%;
+                    // margin: 0px 0px 20px 0px;            
+                }
+    
+                .Sort{
+                    // width: fit-content;
+                    // align-self:flex-start;
+                    // margin: 0px 0px 20px 0;
+                    // .input-group{
+                    //     button.dropdown-toggle{
+                    //         width: max-content;
+                    //         padding: auto;
+                    //     }
+                    // }
+            
+                }
+            }
+    
+            .TableBox{
+                table{
+                    margin: 0 5% ;
+                    width: 90%;
+                    td{
+                        height: 46px;
+                    }
+            
+                }
+            }
+        
+    
+            // .TablePanigation{
+              
+            //     li {
+            //         button{
+                
+            //             height: 25px;
+            //             width: 25px ;
+            //             min-height: 25px;
+            //             min-width: 25px;
+
+            //             line-height: 20px;
+            //             font-size: 11px;
+            //         }
+
+            //     }
+            // }
+
+        } // MusicContainer
+    }
+    
+}
