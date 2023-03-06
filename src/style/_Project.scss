@@ -7,7 +7,7 @@
 @import './project/LinkApp';
 
 .Project{
-    background-color: #28282c ;
+    // background-color: #28282c ;
     height: fit-content;
     min-height: 100vh;
     width: 100vw;
@@ -30,27 +30,27 @@
         }
     } // Header
     .Container{
-        // justify-content: center;
-        // align-items: center;
+
+        // position: relative;
         display: flex;
         width: 100vw;
         .ProjectBar{
             position: absolute;
-            display: flex;
+            display: flex;  
             flex-direction: column ;
-            height: calc(100vh - 100px );
+            height: 100vh ;
             width: 320px;
             min-width: 320px;
             text-align: center;
-            // direction: ltr;
             pointer-events: none;
-            // z-index: 50;
             /* Project Title */
             .ProjectListTitle{
+                
                 display: flex;
                 justify-content: flex-end;
-                // align-items: flex-end;
+                // background-color: #28282c;
                 background-color: #28282c;
+
                 z-index: 50;
                 p{
                     position: relative; 
@@ -83,8 +83,10 @@
                 flex-direction: column ;
                 gap: 15px;
                 overflow: auto;
-                padding: 10px 0 10px 20px;
+                padding: 10px 0 50px 20px;
+                // background-color: #28282c;
                 background-color: #28282c;
+
                 padding-right: 20px;
                 z-index: 50;
                 pointer-events:all;

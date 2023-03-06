@@ -1,5 +1,5 @@
 .Page_Intro {
-    background-color: #28282c ;
+    // background-color: #28282c ;
     height: fit-content;
     min-height: 100vh;
     width: 100vw;
@@ -26,6 +26,7 @@
     .Container{
         display: flex;
         justify-content: center;
+        align-items: center;
         .Avatar_name_image{
             display: flex;
             flex-direction: column;
@@ -43,11 +44,11 @@
         
     
         .Info{
-            height: fit-content;
             width: 60%;
             padding-right: 10px;
             li{
                 color: #dddddd;
+                // float: left;
                 b{
                     color:#eaeaeb;
                 }
@@ -57,9 +58,11 @@
                     list-style:  none;
                     display: inline-block;
                     width: 45%;
+                    margin-right: 5px;
                 }
             }
             .li_full{
+                margin-top: 30px;
                 li{
                     list-style:  none;
                     display: inline-block;
@@ -68,12 +71,13 @@
             }
     
             h2{
+        
                 color: #f7f7f7;
                 margin: 0 0 5px 0px;
             }
-            div{
-                margin-bottom: 20px;
-            }
+            // div{
+            //     margin-bottom: 20px;
+            // }
         } // .Info
     
 

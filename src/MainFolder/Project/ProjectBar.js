@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosArrowBack } from "react-icons/io";
 
 const ProjectBar = ({ CurrentProject, SetCurrentProject }) => {
@@ -55,12 +55,17 @@ const ProjectBar = ({ CurrentProject, SetCurrentProject }) => {
         if (project[1] == "able") {
             SetCurrentProject(project[0])
             SetActive(ColorList[(index % 4)])
-            SetSideBarActive(false)
+            // SetSideBarActive(false)
+
+            if (parseInt(window.innerWidth) < 425) {
+                SetSideBarActive(false)
+            } else {
+                if (index === 2) {
+                    SetSideBarActive(false)
+                }
+            }
         }
-        // if (index == 5) {
-        // SetSideBarActive(false)
-        // 
-        // }
+
     }
     const IsSideBarActive = (e) => {
         switch (e) {
@@ -72,7 +77,11 @@ const ProjectBar = ({ CurrentProject, SetCurrentProject }) => {
                 return SideBarActive ? SideBarStyle.ArrowOpen : SideBarStyle.ArrowClose
         }
     }
+    useEffect(() => {
+        const deviceWidth = window.innerWidth
+        SetSideBarActive((deviceWidth < 425 || deviceWidth > 991) ? true : false)
 
+    }, [])
     return (
         <div className="ProjectBar" >
             <div className="ProjectListTitle" style={IsSideBarActive('Title')}>

@@ -222,12 +222,13 @@
             font-style: italic;
             font-size: 14px;
             color: #a7a7a7;
+            margin-right: 30px;
         }
     } // CustomWeather
 
 } // WeatherApp
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 975px) {
     .WeatherApp {
         justify-content: center;
         .CustomWeather{

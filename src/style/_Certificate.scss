@@ -1,7 +1,9 @@
   .Certificate_Page{
     width: 100vw;
-    height: 100vh;
-    background-color: #28282c ;
+    height: fit-content;
+    min-height: 100vh;
+
+    // background-color: #28282c ;  
     color: #fff;
     padding-top: 60px;
     .Header{
@@ -36,9 +38,9 @@
                 box-shadow: rgba(255,255,255, 0.2) 0px 8px 24px;
                 cursor: pointer;
             }
-            img:hover{
-                height: 255px;
-            }
+            // img:hover{
+            //     height: 255px;
+            // }
         }
         .certifi:nth-child(odd){
             img{
@@ -116,4 +118,9 @@
             }   
         }
       }//Certificate_Page
+}
+@media only screen and (min-height: 750px) and (max-width: 1000px) {
+    .Certificate_Page{
+        min-height: fit-content;
+    }//Certificate_Page
 }

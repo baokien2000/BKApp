@@ -21,9 +21,7 @@ const Certificate = ({ forwardedRef }) => {
         setShow(true);
         setImageSrc(src);
     }
-    const ImageModel = (e) => {
-        console.log(e)
-    }
+
 
     return (
         <div className='Certificate_Page' id='CertificateID' ref={forwardedRef}>

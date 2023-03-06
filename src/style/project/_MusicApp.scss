@@ -1,5 +1,4 @@
 .MusicApp{
-    background-color: #28282c;
     // f3f5f9
     color: white;
     width: 100%;
@@ -8,7 +7,6 @@
     // background-color: yellow;
     .MusicSideBar{
         width: 350px;
-        background-color: #28282c;
 
         .SideTitle{
             height: 60px;
@@ -68,6 +66,7 @@
     .MusicContainer{
         width: 100%;
         // background-color: red;
+
         .TableLoading{
             text-align: center;
             font-size: 25px;
@@ -226,7 +225,9 @@
             display: none;
         }
         .MusicContainer{
-
+            .Waitting{
+                width: 100%;            
+            }
             .SideItemList_Mobile{
                 display: flex;
                 width: 100%;

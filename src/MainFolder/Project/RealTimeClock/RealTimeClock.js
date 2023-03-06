@@ -7,17 +7,7 @@ export default function RealTimeClock() {
         let CurrentTime = setInterval(() => {
             setTime(new Date())
         }, 1000);
-        console.log('-----------------')
-        console.log(Time.getHours())
 
-        console.log(Time.getMinutes())
-
-        console.log((Time.getHours() * Time.getMinutes()) / 2)
-
-        console.log()
-        console.log()
-
-        console.log('-----------------')
         return () => clearInterval(CurrentTime)
     }, [])
 

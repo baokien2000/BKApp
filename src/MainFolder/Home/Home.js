@@ -4,6 +4,7 @@ import HomeImage from "../../Image/HomeImage3.png"
 import HI from "../../Image/HI.png"
 import Button from 'react-bootstrap/Button';
 
+import helloWorld from "../../Image/helloWorld.gif"
 
 const Home = ({ forwardedRef, Home_ContactButton }) => {
 
@@ -16,13 +17,16 @@ const Home = ({ forwardedRef, Home_ContactButton }) => {
                 <img src={HI} />
 
                 <h2>{myData["BK"][Language]["Home_Title"]}</h2>
-                <Button variant="primary" onClick={() => Home_ContactButton()}>
+                <button className='DesignButton' onClick={() => Home_ContactButton()}>
                     {myData["BK"][Language]["ContactMe"]}
-                </Button>
+                </button>
+                {/* <Button variant="primary" onClick={() => Home_ContactButton()}>
+                    {myData["BK"][Language]["ContactMe"]}
+                </Button> */}
 
             </div>
             <div className='Page_Home_Image'>
-                <img src={HomeImage} />
+                <img src={helloWorld} />
             </div>
         </div>
     );

@@ -8,10 +8,10 @@ const Skill = ({ forwardedRef }) => {
 
     const SkillName = [
         ['HTML', 85], ['CSS/SCSS', 82],
-        ['JavaScript', 75], ['ReactJS', 70],
+        ['JavaScript', 75], ['ReactJS', 75],
         ['Jquery', 65], ['PHP', 60],
-        ['SQL', 60], ['GitHub', 65],
-        ['Java', 65], ['English', 70],
+        ['SQL', 60], ['Nodejs', 50],
+        ['GitHub', 65], ['English', 70],
     ]
     return (
         <div className='Page_Skill' id="SkillID" ref={forwardedRef}>

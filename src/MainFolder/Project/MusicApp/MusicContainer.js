@@ -50,8 +50,9 @@ export default function MusicContainer(props) {
         }
     }
     const TableDisplay = () => {
+        return <Waitting />
+
         if (props.Loading) {
-            // return <p className='TableLoading'>Loading ...</p>
             return <Waitting />
 
         } else {

@@ -1,10 +1,10 @@
 .Contact_Page{
     width: 100vw;
-    height: 100vh;
-    background-color: #28282c ;
+    height: fit-content ;
+    min-height: 100vh;
+    // background-color: #28282c ;
     color: #fff;
     padding-top: 60px;
-
     .Header{
         width: 100%;
         margin: auto;
@@ -76,7 +76,8 @@
         } // Card
     } // .Container
 }
-@media only screen and (max-width: 425px) {
+
+@media only screen and (max-width: 767px) {
     .Contact_Page{
         height: fit-content;
         padding-bottom: 50px;
@@ -88,4 +89,10 @@
             } // Card
         } // .Container
     }
+}
+@media only screen and (min-height: 750px) and (max-width: 1000px) {
+    .Contact_Page{
+        min-height: fit-content;
+        padding-bottom: 50px;
+    }//Certificate_Page
 }

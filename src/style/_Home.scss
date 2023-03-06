@@ -1,16 +1,17 @@
 .Page_Home {
     width: 100vw;
     height: 100vh;
-    background-color: #28282c;
+    // background-color: #28282c;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
 
     .Page_Home_Text {
-        width: 60%;
-        padding: 0 100px;
-
+        width: 50%;
+        padding: 0 50px 0 100px;
+        position: relative;
+        z-index: 2;
         h2 {
             margin: 0px 0 30px 0;
         }
@@ -23,21 +24,31 @@
             // animation: wave-animation 3s linear -3s infinite;
             animation: wave-animation 3s linear infinite;
             transform-origin: bottom center;
-
         }
     }
 
     .Page_Home_Image {
-        float: right;
-        width: 40%;
-
+        // float: right;
+        width: 50%;
+        
         img {
             filter: grayscale(0%);
-            width: 90%;
+            width: 80%;
             animation: picture-animation 5s linear infinite;
+            margin-bottom: 70px;
         }
+        position: relative;
+        z-index: 1;
     }
-
+    .DesignButton{
+        background-color: transparent;
+        color: white;
+        padding: 8px 13px;
+        border: 2px solid #34aab9;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+    }
 }
 
 @keyframes wave-animation {
@@ -56,36 +67,40 @@
 
 @keyframes picture-animation {
     0% {
-        transform: translateY(-15px);
+        transform: translateY(40px);
     }
 
     50% {
-        transform: translateY(15px);
+        transform: translateY(10px);
     }
 
     100% {
-        transform: translateY(-15px);
+        transform: translateY(40px);
     }
 }
-@media only screen and (max-width: 750px){ // Tablet
-    .Page_Home {
-        .Page_Home_Text {
-            padding: 0 30px;
-        }
+// @media only screen and (max-width: 991px){ // Tablet
+//     .Page_Home {
+//         .Page_Home_Text {
+//             padding: 0 30px;
+//         }
 
-    }
-}
-@media only screen and (max-width: 550px){ // Tablet
+//     }
+// }
+@media only screen and (max-width: 991px){ // Tablet
     .Page_Home {
         height: fit-content;
+        min-height: 100vh;
         flex-direction: column-reverse;
         .Page_Home_Text {
             width: 100%;
             padding: 0 30px;
-
+            span{
+                font-size: 20px;
+                margin-right: 10px;
+            }
             h2 {
                 margin: 0px 0 20px 0;
-                font-size: 20px;
+                font-size: 25px;
             }
 
             img {
@@ -101,13 +116,15 @@
         }
 
         .Page_Home_Image {
-            width: 80%;
-            margin-top: 100px;
+            width: 100%;
+            margin-top: 0px;
             display: flex;
             justify-content: center;
+            
             img {
-                filter: grayscale(0%);
                 width: 70%;
+                margin-bottom: 100px;
+
             }
          }
     }
@@ -139,7 +156,7 @@
 
         .Page_Home_Image {
             width: 100%;
-            margin-top: 100px;
+            margin-top: 0px;
             display: flex;
             justify-content: center;
             img {

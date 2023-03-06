@@ -2,7 +2,7 @@
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
-    background-color: #28282c ;
+    // background-color: #28282c ;
     color: white;
     display: flex;
     flex-direction: column;
@@ -43,9 +43,13 @@
                 text-align: end;
                 padding-right: 20px;
                 padding-bottom: 5px;
+     
             }
             .progress{
                 height: 10px;
+                .progress-bar{
+                    background-color: #34aab9;
+                }
             }
         }
     } // .Coitainer

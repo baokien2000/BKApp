@@ -32,7 +32,7 @@ const Intro = ({ forwardedRef }) => {
                     <div className='li_half'>
                         <h2>{myData["BK"][Language]["ThongTin"]}</h2>
                         <li>{Split_info(myData["BK"][Language]["Ten"])}</li>
-                        <li>{Split_info(myData["BK"][Language]["Tuoi"])}</li>
+                        {/* <li>{Split_info(myData["BK"][Language]["Tuoi"])}</li> */}
                         <li>{Split_info(myData["BK"][Language]["GioiTinh"])}</li>
                         <li>{Split_info(myData["BK"][Language]["NgaySinh"])}</li>
                         <li>{Split_info(myData["BK"][Language]["NoiSinh"])}</li>
@@ -43,11 +43,11 @@ const Intro = ({ forwardedRef }) => {
                         <h2>{myData["BK"][Language]["GioiThieuBanThan"]}</h2>
                         <li>{myData["BK"][Language]["GioiThieuBanThan_1"]}</li>
                     </div>
-                    <div className='li_full'>
+                    {/* <div className='li_full'>
                         <h2>{myData["BK"][Language]["MucTieu"]}</h2>
                         <li>{Split_info(myData["BK"][Language]["MucTieuNgan"])}</li>
                         <li>{Split_info(myData["BK"][Language]["MucTieuDai"])}</li>
-                    </div>
+                    </div> */}
 
 
                 </div>
